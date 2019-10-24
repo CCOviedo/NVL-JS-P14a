@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+	<head></head>
+	<body>
+		<div>
+			<ul id="peliculas"></ul>
+		</div>
+	</body>
+	
+	<script>
+		var pelis = [
+		 {
+		   "Nombre": "El señor de los anillos",
+		   "Genero": "Acción"
+		 },
+		{
+		   "Nombre": "Regreso al Futuro",
+		   "Genero": "Acción"
+		 },
+		{
+		   "Nombre": "Los increibles 2",
+		   "Genero": "Animación"
+		 },
+		 {
+		   "Nombre": "Sample 1",
+		   "Genero": "Sample"
+		 },
+		{
+		   "Nombre": "Sample 2",
+		   "Genero": "Sample"
+		 },
+		{
+		   "Nombre": "Sample 3",
+		   "Genero": "Sample"
+		 },
+		{
+		   "Nombre": "Sample 4",
+		   "Genero": "Sample"
+		 },
+		{
+		   "Nombre": "Sample 5",
+		   "Genero": "Terror"
+		 },
+		{
+		   "Nombre": "Sample 6",
+		   "Genero": "western"
+		 },
+		{
+		   "Nombre": "Sample 7",
+		   "Genero": "western"
+		 },
+		{
+		   "Nombre": "Sample 8",
+		   "Genero": "Terror"
+		 },
+		{
+		   "Nombre": "Sample 9",
+		   "Genero": "western"
+		 },
+		{
+		   "Nombre": "Sample 10",
+		   "Genero": "Terror"
+		 },
+		{
+		   "Nombre": "Sample 11",
+		   "Genero": "cienciaficcion"
+		 },
+		 {
+		   "Nombre": "Sample 12",
+		   "Genero": "western"
+		 },
+		{
+		   "Nombre": "Sample 13",
+		   "Genero": "cienciaficcion"
+		 },
+		{
+		   "Nombre": "Sample 14",
+		   "Genero": "western"
+		 },
+		{
+		   "Nombre": "Sample 15",
+		   "Genero": "Terror"
+		 },
+		 {
+		   "Nombre": "Sample 16",
+		   "Genero": "cienciaficcion"
+		 },
+		{
+		   "Nombre": "Sample 17",
+		   "Genero": "Terror"
+		 }
+		];
+
+		function crearLista(){
+			var lista = document.querySelector('#peliculas');
+
+			for(var pe in pelis){
+				var item = document.createElement('li');
+				lista.appendChild(item);
+				
+				switch(pe.Genero){
+					case "Acción":
+						item.innerHTML = "<img src='https://image.flaticon.com/icons/png/512/856/856938.png'/>";
+						break;
+						
+					case "Animación":
+						item.innerHTML = "<img src='https://image.flaticon.com/icons/png/512/1129/1129590.png'/>";
+						break;
+						
+					case "Sample":
+						item.innerHTML = "<img src='https://image.flaticon.com/icons/png/512/1821/1821966.png'/>";
+						break;
+						
+					case "western":
+						item.innerHTML = "<img src='https://img.icons8.com/metro/452/western.png'/>";
+						break;
+						
+					case "Terror":
+						item.innerHTML = "<img src='https://media.istockphoto.com/vectors/frankenstein-line-icon-halloween-and-scary-horror-sign-vector-a-on-vector-id857496828'/>";
+						break;
+						
+					case "cienciaficcion":
+						item.innerHTML = "<img src='https://img2.freepng.es/20180511/kle/kisspng-computer-icons-science-fiction-encapsulated-postsc-5af5f967b68904.1424396815260696077477.jpg'/>";
+						break;
+
+					default:
+					break;
+				}
+				
+			}
+		}
+
+		crearLista();
+	</script>
+</html>
